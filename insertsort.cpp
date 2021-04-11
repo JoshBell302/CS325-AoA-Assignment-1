@@ -22,7 +22,7 @@ void insertionsort(int array[], int size) {
 	}
 
 
-    return;
+	return;
 }
 
 int main() {
@@ -72,9 +72,10 @@ int main() {
 				}
 			}
 		}
-		len = 0;
-		while (intArray[len] != 0)
-			len++;
+		len = intArray[0];
+
+		for (int i = 0; i < len + 1; i++)
+			intArray[i] = intArray[i + 1];
 
 		insertionsort(intArray, len);
 
